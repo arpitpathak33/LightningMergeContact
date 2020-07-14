@@ -1,0 +1,22 @@
+<aura:component implements="forceCommunity:profileMenuInterface" access="global" controller="Customprofilemenu">
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    <aura:attribute name="userInfo" type="user"/>
+    <aura:attribute name="userID" type="String"/>
+    <aura:attribute name="options" type="String[]" default="Home,My Profile,Log Out"/>
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            <ui:menu>
+                <ui:menuTriggerLink class="textCentered" aura:id="checkboxMenuLabel" label="{!v.userInfo.Name}"/>
+                <ui:menuList class="actionMenu" aura:id="actionMenu">
+                    <aura:iteration items="{!v.options}" var="itemLabel">
+                        <ui:actionMenuItem label="{!itemLabel}" click="{!c.handleClick}"/>
+                    </aura:iteration>
+                </ui:menuList>
+            </ui:menu>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+            <c:Header/>
+        </div>
+    </div>
+</aura:component>

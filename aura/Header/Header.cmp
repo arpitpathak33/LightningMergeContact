@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="Header">
+    <aura:attribute name="Get_Result" type="String" />
+    <aura:handler event="c:Result" action="{!c.getValueFromApplicationEvent}"/>
+    <div class=""><p>{!v.Get_Result}%</p></div>
+</aura:component>

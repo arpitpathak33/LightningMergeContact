@@ -1,0 +1,10 @@
+<design:component>    
+	<design:attribute name="theme" label="Theme" datasource="blue, green , orange" description="Color theme of the component" />
+    
+    <design:attribute name="size" label="Size" datasource="small, medium, large" description="Size of the of the component" />
+    
+    <design:attribute name="backgroundColor" label="Background Color" description="Enter Background Color" />
+    <design:attribute name="boxPadding" label="Padding" description="It will keep or remove the padding" />
+    <design:attribute name="buttoncolor" label="Button Color" datasource="slds-button_neutral,slds-button_brand,slds-button_outline-brand,slds-button_inverse,slds-button_destructive,slds-button_text-destructive,slds-button_success" description="It will change the color of button" />
+  <design:attribute name="textColor" label="Font Color of Question" description="Enter Question Color" /> 
+</design:component>
